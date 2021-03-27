@@ -31,7 +31,7 @@ Pass the` VueRouter` instance to the plugin and let it handle everything for you
 // your main.js
 import { createApp } from 'vue'
 import { createRouter } from "vue-router";
-import VueYandexMetrika from 'vue-yandex-metrika'                               
+import VueYandexMetrika from 'vue-v3-yandex-metrika'                               
 
 const router = createRouter({...}) // your routes
 
@@ -55,7 +55,7 @@ Works without router: [Metrika API]
 ```javascript
 // your main.js
 import { createApp } from 'vue'
-import VueYandexMetrika from 'vue-yandex-metrika'                               
+import VueYandexMetrika from 'vue-v3-yandex-metrika'                               
 
 app.use(VueYandexMetrika, {
 	id: XXXXXXXX,
