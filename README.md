@@ -44,18 +44,23 @@ $ npm install vue-yandex-metrika --save
 Pass the` VueRouter` instance to the plugin and let it handle everything for you ([Metrika API] is also available):
 ```javascript
 // your main.js
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createApp } from 'vue'
+import { createRouter } from "vue-router";
 import VueYandexMetrika from 'vue-yandex-metrika'                               
 
-const router = new VueRouter({...}) // your routes
+const router = createRouter({...}) // your routes
 
-Vue.use(VueYandexMetrika, {
-    id: XXXXXXXX,
-    router: router,
-    env: process.env.NODE_ENV
+const app = createApp(App)
+
+app.use(router)
+app.use(VueYandexMetrika, {
+	id: XXXXXXXX,
+	router: router,
+	env: process.env.NODE_ENV
     // other options
 })
+
+app.mount( '#app')
 ```
 
 
@@ -64,12 +69,12 @@ Vue.use(VueYandexMetrika, {
 Works without router: [Metrika API]
 ```javascript
 // your main.js
-import Vue from 'vue'
+import { createApp } from 'vue'
 import VueYandexMetrika from 'vue-yandex-metrika'                               
 
-Vue.use(VueYandexMetrika, {
-    id: XXXXXXXX,
-    env: process.env.NODE_ENV
+app.use(VueYandexMetrika, {
+	id: XXXXXXXX,
+	env: process.env.NODE_ENV
     // other options
 })
 ```
