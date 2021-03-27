@@ -70,5 +70,8 @@
     "vue-router": "^3.0.1",
     "webpack": "^3.9.1",
     "webpack-merge": "^4.1.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@ddtikhonov"
   }
 }
