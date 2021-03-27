@@ -3,9 +3,9 @@
 </p>
 
 
-# Vue Yandex Metrika
+# Vue v3 Yandex Metrika
 
-**vue-yandex-metrika** allows you to send data about visited pages to [Yandex Metrika].
+**vue-v3-yandex-metrika** allows you to send data about visited pages to [Yandex Metrika].
 
 ## Installation
 
