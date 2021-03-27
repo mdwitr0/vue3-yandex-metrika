@@ -21,7 +21,7 @@
     }
   },
   "keywords": [
-    "vue",
+    "vue3",
     "tracking",
     "Yandex",
     "yandex",
@@ -30,26 +30,26 @@
     "Yandex Metrika",
     "yandex metrika",
     "yandex tracking",
-    "vue-yandex-metrika",
-    "vue-yandex-metrica",
+    "vue-v3-yandex-metrika",
+    "vue-v3-yandex-metrica",
     "Яндекс",
     "яндекс",
     "Яндекс Метрика",
     "яндекс метрика"
   ],
-  "main": "dist/vue-yandex-metrika.js",
+  "main": "dist/vue-v3-yandex-metrika.js",
   "files": [
     "dist"
   ],
   "author": {
-    "name": "Victor Chaptsev",
-    "email": "victor@chaptsev.ru"
+    "name": "Daniil Tikhonov",
+    "email": "ddtikh0n0v@yandex.ru"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vchaptsev/vue-yandex-metrika/issues"
+    "url": "https://github.com/ddtikhonov/vue-v3-yandex-metrika/issues"
   },
-  "homepage": "https://github.com/vchaptsev/vue-yandex-metrika#readme",
+  "homepage": "https://github.com/ddtikhonov/vue-v3-yandex-metrika#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
