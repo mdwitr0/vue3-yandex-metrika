@@ -27,13 +27,13 @@
 Install with [yarn]:
 
 ```bash
-$ yarn add vue-yandex-metrika
+$ yarn add vue-v3-yandex-metrika
 ```
 
 Install with [npm]:
 
 ```bash
-$ npm install vue-yandex-metrika --save
+$ npm install vue-v3-yandex-metrika --save
 ```
 
 
