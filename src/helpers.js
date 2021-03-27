@@ -31,7 +31,7 @@ export function loadScript (callback, scriptSrc=config.scriptSrc) {
 }
 
 
-export function createMetrika (Vue) {
+export function createMetrika (app) {
 
     if (config.env === "production") {
 
@@ -42,7 +42,7 @@ export function createMetrika (Vue) {
         }
         const metrika = new Ya.Metrika2(init)
         window[`yaCounter${config.id}`] = metrika
-        return Vue.prototype.$metrika = Vue.$metrika = metrika
+        return app.config.globalProperties.$metrika = metrika
 
     } else {
 
@@ -50,7 +50,7 @@ export function createMetrika (Vue) {
         console.warn('[vue-yandex-metrika] Tracking is disabled, because env option is not "production"')
         if (config.debug) {console.warn('[vue-yandex-metrika] DEBUG is true: you\'ll see all API calls in the console')}
 
-        return Vue.prototype.$metrika = Vue.$metrika = {
+        return app.config.globalProperties.$metrika = {
             addFileExtension() {if (config.debug) {console.log('[vue-yandex-metrika] addFileExtension:', arguments)}},
             extLink() {if (config.debug) {console.log('[vue-yandex-metrika] extLink:', arguments)}},
             file() {if (config.debug) {console.log('[vue-yandex-metrika] file:', arguments)}},
