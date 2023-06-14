@@ -1,4 +1,5 @@
 /* istanbul ignore file */
+import { provide } from 'vue'
 import config from './config'
 
 
@@ -42,6 +43,7 @@ export function createMetrika (app) {
         }
         const metrika = new Ya.Metrika2(init)
         window[`yaCounter${config.id}`] = metrika
+        provide('$metrika', metrika)
         return app.config.globalProperties.$metrika = metrika
 
     } else {
@@ -50,7 +52,7 @@ export function createMetrika (app) {
         console.warn('[vue-yandex-metrika] Tracking is disabled, because env option is not "production"')
         if (config.debug) {console.warn('[vue-yandex-metrika] DEBUG is true: you\'ll see all API calls in the console')}
 
-        return app.config.globalProperties.$metrika = {
+        const metrika = {
             addFileExtension() {if (config.debug) {console.log('[vue-yandex-metrika] addFileExtension:', arguments)}},
             extLink() {if (config.debug) {console.log('[vue-yandex-metrika] extLink:', arguments)}},
             file() {if (config.debug) {console.log('[vue-yandex-metrika] file:', arguments)}},
@@ -63,6 +65,9 @@ export function createMetrika (app) {
             setUserID() {if (config.debug) {console.log('[vue-yandex-metrika] setUserID:', arguments)}},
             userParams() {if (config.debug) {console.log('[vue-yandex-metrika] userParams:', arguments)}}
         }
+
+        provide('$metrika', metrika)
+        return app.config.globalProperties.$metrika = metrika
     }
 }
 
