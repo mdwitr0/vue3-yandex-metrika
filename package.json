@@ -1,6 +1,6 @@
 {
   "name": "vue3-yandex-metrika",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yandex Metrika plugin for Vue3",
   "repository": {
     "type": "git",
